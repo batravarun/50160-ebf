@@ -23,8 +23,8 @@ BEGIN;
 	RETURN;
 END;
 
-exec sp_rename 'InteractionStudio.ActivityWaitQueue_staging' , 'ActivityWaitQueue_staging_old';
-exec sp_rename 'InteractionStudio.ActivityWaitQueue_staging_tmp' , 'ActivityWaitQueue_staging';
+EXEC sp_rename 'InteractionStudio.ActivityWaitQueue_staging' , 'ActivityWaitQueue_staging_old';
+EXEC sp_rename 'InteractionStudio.ActivityWaitQueue_staging_tmp' , 'ActivityWaitQueue_staging';
 
 
 IF NOT EXISTS(SELECT * FROM sys.tables WHERE name = N'ActivityWaitQueue_staging_old' AND schema_id = SCHEMA_ID(N'InteractionStudio'))

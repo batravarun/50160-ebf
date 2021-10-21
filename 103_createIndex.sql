@@ -17,3 +17,11 @@ BEGIN
 		WITH (ONLINE=ON, DATA_COMPRESSION=PAGE);
 END
 GO
+
+
+/*####################################################################
+$$Sproc:  Create AWQ staging table temp with index
+$$Author: Varun Batra
+$$History:  
+			2021-10-21 - VB	Created
+#####################################################################*/
